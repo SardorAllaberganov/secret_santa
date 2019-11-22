@@ -265,6 +265,8 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-size: 22px;
+  text-decoration: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -272,7 +274,7 @@ p {
 
 .fox-logo img {
   margin-left: 10px;
-  width: 60px;
+  width: 50px;
 }
 
 @media only screen and (min-width: 1024px) {
