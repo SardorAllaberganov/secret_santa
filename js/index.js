@@ -15,13 +15,16 @@ $(document).ready(function () {
 
             $(".snow-anim").css("margin-left", -moveX + "px");
             $(".star-anim").css("margin-top", -moveY + "px");
-        });
+        });   
     }
-    console.log("hello");
     $(".participate-btn").on("click", function () {
         $(".form").fadeIn();
         $(".participate-btn").hide();
         $(".logo").css("margin-top", "20px");
+    });
+    $(".participation-confirmation").on("click", function () {
+        $(".form").hide();
+        $(".confirmation").show();
     });
     $(".close-btn").on("click", function () {
         $(".form").hide();
@@ -34,8 +37,8 @@ $(document).ready(function () {
 let snowmax = 40,
     snowcolor = new Array("#aaaacc", "#ddddff", "#ccccdd", "#f3f3f3", "#f0ffff"),
     snowtype = new Array("Arial Black", "Arial Narrow", "Times", "Comic Sans MS"),
-    snowletter = "*",
-    sinkspeed = 0.5,
+    snowletter = "*",  
+    sinkspeed = 0.5, 
     snowmaxsize = 30,
     snowminsize = 8,
     snow = new Array(),

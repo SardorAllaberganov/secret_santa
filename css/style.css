@@ -183,6 +183,10 @@ html, body {
   margin: 30px auto 0 auto;
 }
 
+.confirmation {
+  display: none;
+}
+
 button {
   outline: none;
 }
@@ -250,6 +254,34 @@ p {
 .img-404 {
   max-width: 600px;
   margin-top: 170px;
+}
+
+.fox-logo {
+  position: fixed;
+  z-index: 99;
+  right: 30px;
+  font-family: "AmaticSC-Bold";
+  bottom: 1%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.fox-logo img {
+  margin-left: 10px;
+  width: 60px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .confirmation {
+    margin-top: 20px;
+  }
+  .fox-logo {
+    bottom: 5%;
+  }
 }
 
 @media only screen and (max-width: 1024px) {

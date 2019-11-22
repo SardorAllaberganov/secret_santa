@@ -172,6 +172,10 @@ html, body{
     margin: 30px auto 0 auto;
 }
 
+.confirmation{
+    display: none;
+}
+
 button{
     outline: none
 }
@@ -235,6 +239,28 @@ p{
     margin-top: 170px;
 }
 
+.fox-logo{
+    position: fixed;
+    z-index: 99;
+    right: 30px;
+    font-family: "AmaticSC-Bold";
+    bottom: 1%;
+    align-items: center;
+    display: flex;
+    img{
+        margin-left: 10px;
+        width: 60px;
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    .confirmation{
+        margin-top: 20px;
+    }
+    .fox-logo{
+        bottom: 5%;
+    }
+}
 @media only screen and (max-width: 1024px){
     .candy2{
         top: 50%;
