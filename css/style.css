@@ -199,7 +199,7 @@ button {
   position: relative;
   text-align: left;
   margin: 20px auto 0 auto;
-  background: #fff;
+  background: #f7f7f7;
   z-index: 999;
   overflow-y: auto;
   max-width: 400px;
