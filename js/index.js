@@ -1,6 +1,6 @@
 $(document).ready(function () {
     if ($(window).width() < 768) {
-        
+
     }
     else {
         $(".section1").mousemove(function (event) {
@@ -15,7 +15,7 @@ $(document).ready(function () {
 
             $(".snow-anim").css("margin-left", -moveX + "px");
             $(".star-anim").css("margin-top", -moveY + "px");
-        });   
+        });
     }
     $(".participate-btn").on("click", function () {
         $(".form").fadeIn();
@@ -30,15 +30,40 @@ $(document).ready(function () {
         $(".form").hide();
         $(".participate-btn").fadeIn();
         $(".logo").css("margin-top", "100px");
-    })
+    });
+
+    var audio = new Audio("/audio.mp3");
+    audio.play();
+
+    $('#play-pause-button').on("click", function () {
+        if ($(this).find("img").hasClass('pause')) {
+            $(this).find("img").removeClass("pause");
+            $(this).find("img").addClass("play");
+            $(this).find("img").attr('src','img/play.svg');
+            $(this).find("span").text('Play');
+            audio.pause();
+        }
+        else if($(this).find("img").hasClass('play')) {
+            $(this).find("img").removeClass("play");
+            $(this).find("img").addClass("pause");
+            $(this).find("img").attr('src','img/pause.svg');
+            $(this).find("span").text('Pause');
+            audio.play();
+        }
+    });
+
+    audio.onended = function () {
+        $("#play-pause-button").removeClass('fa-pause');
+        $("#play-pause-button").addClass('fa-play');
+    };
 });
 
 
 let snowmax = 40,
     snowcolor = new Array("#aaaacc", "#ddddff", "#ccccdd", "#f3f3f3", "#f0ffff"),
     snowtype = new Array("Arial Black", "Arial Narrow", "Times", "Comic Sans MS"),
-    snowletter = "*",  
-    sinkspeed = 0.5, 
+    snowletter = "*",
+    sinkspeed = 0.5,
     snowmaxsize = 30,
     snowminsize = 8,
     snow = new Array(),
